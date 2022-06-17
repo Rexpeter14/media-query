@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;700&family=Poppins:wght@400;700&display=swap");
+      :root {
+        --red: hsl(0, 100%, 74%);
+        --green: hsl(154, 59%, 51%);
+        --blue: hsl(248, 32%, 49%);
+        --dark-blue: hsl(249, 10%, 26%);
+        --grayish-blue: hsl(246, 25%, 77%);
+        --mobile: 375px;
+        --desktop: 1440px;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        min-height: 100vh;
+      }
+
+      body {
+        background:linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aHVtYW58ZW58MHx8MHx8&w=1000&q=80);
+        /* add modal to background */
+        background-repeat: no-repeat;
+
+        background-size: cover;
+        font-family: "Poppins", sans-serif;
+        min-height: 100vh;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        max-width: 1000px;
+        margin: 20px;
+      }
+
+      .top-header {
+        background-color: var(--blue);
+        padding: 1rem;
+        color: white;
+        font-size: 1rem;
+        text-align: center;
+        border-radius: 10px;
+      }
+
+      .bottom-header{
+          background-color: white;
+          padding: 20px;
+          border-radius: 20px;
+          margin-top: 1rem;
+      }
+
+      .bottom-header form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      input:not([type="checkbox"]) {
+        border: 1px solid var(--grayish-blue);
+        border-radius: 10px;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--grayish-blue);
+        background-color: white;
+        height: 50px;
+      }
+
+      .btn-green {
+        background-color: var(--green);
+        color: white;
+        border: none;
+        border-radius: 10px;
+        padding: 0.5rem;
+        font-size: 1rem;
+        font-weight: 700;
+        cursor: pointer;
+        margin-bottom: 1rem;
+        height: 50px;
+      }
+
+      input[type="checkbox"] {
+        margin-bottom: 1rem;
+      }
+
+      div h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 30px;
+        color: white;
+      }
+
+      div p {
+        font-size: 1rem;
+        margin-bottom: 0;
+        color: white;
+      }
+
+      .checkbox {
+        color: var(--grayish-blue);
+      }
+
+      .checkbox a {
+        color: var(--red);
+        text-decoration: none;
+      }
+
+      /* media query mobile */
+      @media (max-width: 375px) {
+        .container {
+          flex-direction: column;
+        }
+      }
+
+      @media (max-width: 997px) {
+        .container {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <h2>Learn to code by watching others</h2>
+        <p>
+          See how experienced developers solve problems in real-time.
+          <br />
+          watching scripted tutorials is a great. but understanding how
+          <br />
+          developers think is invaluable.
+        </p>
+      </div>
+      <div>
+        <div class="top-header">
+          <b>Try it free 7 days</b> then $20/month thereafter
+        </div>
+        <div class="bottom-header">
+          <br />
+          <form action="">
+            <input type="text" placeholder="First Name" />
+            <input type="text" placeholder="Last Name" />
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
+            <button class="btn-green">CLAIM YOUR FREE TRIAL</button>
+            <!-- checkbox -->
+            <div class="checkbox" style="">
+              <input type="checkbox" id="checkbox" />
+              <label for="checkbox">
+                By clicking the button, you are agreeing to our
+                <a href="#">Terms of Service</a>
+              </label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
